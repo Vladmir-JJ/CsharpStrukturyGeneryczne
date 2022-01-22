@@ -8,21 +8,25 @@ namespace _1_TypyGeneryczne
         {
             var kolejka = new KolejkaKolowa<double>(pojemnosc: 3);
 
-            var kolejkaInt = new KolejkaKolowa<int>();
-            var kolejskaString = new KolejkaKolowa<string>(pojemnosc: 1000);
+            WprowadzanieDanych(kolejka);
+            PrzetwarzanieDanych(kolejka);
+            //Console.ReadLine();
+        }
 
-            var kolejkaOsob = new KolejkaKolowa<Osoba>();
-            kolejkaOsob.Zapisz(new Osoba { Imie = "Marcin", Nazwisko = "Nowak" });
-            kolejkaOsob.Zapisz(new Osoba { Imie = "Tomek", Nazwisko = "Nowak" });
-            kolejkaOsob.Zapisz(new Osoba { Imie = "Jan", Nazwisko = "Nowak" });
-            kolejkaOsob.Zapisz(new Osoba { Imie = "Karol", Nazwisko = "Nowak" });            
-            while (!kolejkaOsob.JestPusty)
+        private static void PrzetwarzanieDanych(KolejkaKolowa<double> kolejka)
+        {
+            var suma = 0.0;
+            Console.WriteLine("W naszej kolejce jest: ");
+            while (!kolejka.JestPusty)
             {
-                var wynik = kolejkaOsob.Czytaj();
-                Console.WriteLine(wynik.Imie);
+                suma += kolejka.Czytaj();
             }
+            Console.WriteLine(suma);
+        }
 
-            /*while (true)
+        private static void WprowadzanieDanych(KolejkaKolowa<double> kolejka)
+        {
+            while (true)
             {
                 var wartosc = 0.0;
                 var wartoscWejsciowa = Console.ReadLine();
@@ -34,19 +38,6 @@ namespace _1_TypyGeneryczne
                 }
                 break;
             }
-            var suma = 0.0;
-            Console.WriteLine("W naszej kolejce jest: ");
-            while (!kolejka.JestPusty)
-            {
-                suma += kolejka.Czytaj();
-            }
-            Console.WriteLine(suma);
-            //Console.ReadLine();*/
         }
-    }
-    public class Osoba
-        {
-        public string Imie { get; set; }
-        public string Nazwisko { get; set; }
-    }
+    }    
 }
