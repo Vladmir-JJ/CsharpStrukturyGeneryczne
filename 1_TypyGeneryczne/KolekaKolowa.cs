@@ -1,16 +1,16 @@
 ﻿namespace _1_TypyGeneryczne
 {
-    public class KolekaKolowa
+    public class KolejkaKolowa
     {
         private double[] bufor;
         private int poczatekBufora;
         private int koniecBufora;
 
-        public KolekaKolowa() :this(pojemnosc: 5)
+        public KolejkaKolowa() :this(pojemnosc: 5)
         {
 
         }
-        public KolekaKolowa(int pojemnosc)
+        public KolejkaKolowa(int pojemnosc)
         {
             bufor = new double[pojemnosc + 1];
             poczatekBufora = 0;
