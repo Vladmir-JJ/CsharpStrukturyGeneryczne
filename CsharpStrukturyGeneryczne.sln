@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_TypyGeneryczne", "1_TypyGeneryczne\1_TypyGeneryczne.csproj", "{7CC3AE92-13E3-4298-A0C5-DDBAC1B35F4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_KolekcjeGeneryczne", "2_KolekcjeGeneryczne\2_KolekcjeGeneryczne.csproj", "{321F4675-E6BE-465A-AF0F-5409B6CC8560}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2_KolekcjeGeneryczne", "2_KolekcjeGeneryczne\2_KolekcjeGeneryczne.csproj", "{321F4675-E6BE-465A-AF0F-5409B6CC8560}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypyGeneryczne_Test", "TypyGeneryczne_Test\TypyGeneryczne_Test.csproj", "{021042F8-8D2D-4074-A791-D6361CC9801B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KolekcjeGeneryczne_TEST", "KolekcjeGeneryczne_TEST\KolekcjeGeneryczne_TEST.csproj", "{36E40D9F-2DD7-499D-B703-78F53CA78AB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{021042F8-8D2D-4074-A791-D6361CC9801B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{021042F8-8D2D-4074-A791-D6361CC9801B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{021042F8-8D2D-4074-A791-D6361CC9801B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36E40D9F-2DD7-499D-B703-78F53CA78AB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36E40D9F-2DD7-499D-B703-78F53CA78AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36E40D9F-2DD7-499D-B703-78F53CA78AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36E40D9F-2DD7-499D-B703-78F53CA78AB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
