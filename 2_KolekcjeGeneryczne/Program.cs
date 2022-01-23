@@ -13,9 +13,25 @@ namespace _2_KolekcjeGeneryczne
             kolejka.Enqueue(new Pracownik { Imie = "Tomasz", Nazwisko = "Sola" });
             kolejka.Enqueue(new Pracownik { Imie = "Michal", Nazwisko = "Strongowski" });
 
+            Console.WriteLine("kolejka");
+
             while(kolejka.Count > 0)
             {
                 var pracownik = kolejka.Dequeue();
+                Console.WriteLine(pracownik.Imie + " " + pracownik.Nazwisko);
+            }
+            Stack<Pracownik> stos = new Stack<Pracownik>();
+            stos.Push(new Pracownik { Imie = "Karol", Nazwisko = "Pokomeda" });
+            stos.Push(new Pracownik { Imie = "Wojciech", Nazwisko = "Czechyra" });
+            stos.Push(new Pracownik { Imie = "Tomasz", Nazwisko = "Sola" });
+            stos.Push(new Pracownik { Imie = "Michal", Nazwisko = "Strongowski" });
+
+            Console.WriteLine();
+            Console.WriteLine("stos");
+
+            while (stos.Count > 0)
+            {
+                var pracownik = stos.Pop();
                 Console.WriteLine(pracownik.Imie + " " + pracownik.Nazwisko);
             }
             /*  var liczby = new List<int>(10);
