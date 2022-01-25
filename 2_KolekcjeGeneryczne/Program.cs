@@ -14,23 +14,10 @@ namespace _2_KolekcjeGeneryczne
             //LinkedList2();
             //Slownik();
             //Slownik2();
+            //SortedDic();
+            //SortedList();
+            //SortedSet();
 
-            var pracownicy = new SortedDictionary<string, List<Pracownik>>();
-            pracownicy.Add("Sprzedaż", new List<Pracownik>() { new Pracownik { Imie = "Jan", Nazwisko = "Kowalski"},
-                                                                            new Pracownik { Imie = "Kazimierz", Nazwisko = "Beton"},
-                                                                             new Pracownik { Imie = "Urszula", Nazwisko = "Krzak"} });
-
-            pracownicy.Add("Informatyka", new List<Pracownik>() { new Pracownik { Imie = "Marcin", Nazwisko = "Kowal"},
-                                                                            new Pracownik { Imie = "Tomek", Nazwisko = "Sola"}});
-
-            pracownicy.Add("Księgowość", new List<Pracownik>() { new Pracownik { Imie = "Monika", Nazwisko = "Wysocka"},
-                                                                            new Pracownik { Imie = "Agata", Nazwisko = "Beton"},
-                                                                            new Pracownik { Imie = "Marta", Nazwisko = "Tutak"},
-                                                                             new Pracownik { Imie = "Renata", Nazwisko = "Popo"} });
-            foreach (var item in pracownicy)
-            {
-                Console.WriteLine("Ilość pracowników w dziale {0} wynosi {1}", item.Key, item.Value.Count);
-            }
             /*  var liczby = new List<int>(10);
               var pojemnosc = -1;
               while(true)
@@ -58,6 +45,70 @@ namespace _2_KolekcjeGeneryczne
             {
                 Console.WriteLine(listaPracownikow[i].Imie + " " + listaPracownikow[i].Nazwisko);
             } */
+        }
+
+        private static void SortedSet()
+        {
+            var sortSet = new SortedSet<int>();
+            sortSet.Add(8);
+            sortSet.Add(6);
+            sortSet.Add(5);
+            sortSet.Add(3);
+            sortSet.Add(4);
+            sortSet.Add(2);
+            sortSet.Add(1);
+
+            foreach (var item in sortSet)
+            {
+                Console.WriteLine(item);
+            }
+            var sortSet1 = new SortedSet<string>();
+            sortSet1.Add("tomek");
+            sortSet1.Add("ada");
+            sortSet1.Add("luiza");
+            sortSet1.Add("zosia");
+            sortSet1.Add("henryk");
+            sortSet1.Add("panam");
+            sortSet1.Add("ogórek");
+            foreach (var item in sortSet1)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        private static void SortedList()
+        {
+            var listaSort = new SortedList<int, string>();
+
+            listaSort.Add(3, "trzy");
+            listaSort.Add(1, "jeden");
+            listaSort.Add(4, "cztery");
+            listaSort.Add(2, "dwa");
+
+            foreach (var item in listaSort)
+            {
+                Console.WriteLine();
+            }
+        }
+
+        private static void SortedDic()
+        {
+            var pracownicy = new SortedList<string, List<Pracownik>>();
+            pracownicy.Add("Sprzedaż", new List<Pracownik>() { new Pracownik { Imie = "Jan", Nazwisko = "Kowalski"},
+                                                                            new Pracownik { Imie = "Kazimierz", Nazwisko = "Beton"},
+                                                                             new Pracownik { Imie = "Urszula", Nazwisko = "Krzak"} });
+
+            pracownicy.Add("Informatyka", new List<Pracownik>() { new Pracownik { Imie = "Marcin", Nazwisko = "Kowal"},
+                                                                            new Pracownik { Imie = "Tomek", Nazwisko = "Sola"}});
+
+            pracownicy.Add("Księgowość", new List<Pracownik>() { new Pracownik { Imie = "Monika", Nazwisko = "Wysocka"},
+                                                                            new Pracownik { Imie = "Agata", Nazwisko = "Beton"},
+                                                                            new Pracownik { Imie = "Marta", Nazwisko = "Tutak"},
+                                                                             new Pracownik { Imie = "Renata", Nazwisko = "Popo"} });
+            foreach (var item in pracownicy)
+            {
+                Console.WriteLine("Ilość pracowników w dziale {0} wynosi {1}", item.Key, item.Value.Count);
+            }
         }
 
         private static void Slownik2()
