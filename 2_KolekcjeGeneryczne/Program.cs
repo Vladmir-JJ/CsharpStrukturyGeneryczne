@@ -18,19 +18,17 @@ namespace _2_KolekcjeGeneryczne
             //SortedList();
             //SortedSet();
 
-            var pracownicy = new SortedDictionary<string, SortedSet<Pracownik>>();
-            pracownicy.Add("Sprzedaż", new SortedSet<Pracownik>(new PracownikComparer()));
-            pracownicy["Sprzedaż"].Add(new Pracownik { Imie = "Jan", Nazwisko = "Kowalski" });
-            pracownicy["Sprzedaż"].Add(new Pracownik { Imie = "Kazimierz", Nazwisko = "Beton" });
-            pracownicy["Sprzedaż"].Add(new Pracownik { Imie = "Urszula", Nazwisko = "Krzak" });
-            pracownicy["Sprzedaż"].Add(new Pracownik { Imie = "Leon", Nazwisko = "Krzak" });
-            pracownicy.Add("Księgowość", new SortedSet<Pracownik>(new PracownikComparer()));
-            pracownicy["Księgowość"].Add(new Pracownik { Imie = "Adam", Nazwisko = "Małysz" });
-            pracownicy["Księgowość"].Add(new Pracownik { Imie = "Monika", Nazwisko = "Wysocka" });
-            pracownicy["Księgowość"].Add(new Pracownik { Imie = "Agata", Nazwisko = "Beton" });
-            pracownicy["Księgowość"].Add(new Pracownik { Imie = "Barbara", Nazwisko = "Beton" });
-            pracownicy["Księgowość"].Add(new Pracownik { Imie = "Marta", Nazwisko = "Tutak" });
-            pracownicy["Księgowość"].Add(new Pracownik { Imie = "Renata", Nazwisko = "Popo" });
+            var pracownicy = new DzialyKolekcja();            
+            pracownicy.Add("Sprzedaż", new Pracownik { Imie = "Leon", Nazwisko = "Krzak" })
+                      .Add("Sprzedaż", new Pracownik { Imie = "Jan", Nazwisko = "Kowalski" })
+                      .Add("Sprzedaż", new Pracownik { Imie = "Kazimierz", Nazwisko = "Beton" })
+                      .Add("Sprzedaż", new Pracownik { Imie = "Urszula", Nazwisko = "Krzak" });
+            pracownicy.Add("Księgowość",new Pracownik { Imie = "Adam", Nazwisko = "Małysz" })
+                    .Add("Księgowość", new Pracownik { Imie = "Monika", Nazwisko = "Wysocka" })
+                    .Add("Księgowość", new Pracownik { Imie = "Agata", Nazwisko = "Beton" })
+                    .Add("Księgowość", new Pracownik { Imie = "Barbara", Nazwisko = "Beton" })
+                    .Add("Księgowość", new Pracownik { Imie = "Marta", Nazwisko = "Tutak" })
+                    .Add("Księgowość", new Pracownik { Imie = "Renata", Nazwisko = "Popo" });
             
 
             foreach (var dzial in pracownicy)
