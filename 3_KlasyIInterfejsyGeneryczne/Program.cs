@@ -1,9 +1,14 @@
 ﻿using System;
+using static _3_KlasyIInterfejsyGeneryczne.KolejkaExtention;
 
 namespace _3_KlasyIInterfejsyGeneryczne
 {
     class Program
     {
+        static void KonsolaWypisz(double dane)
+        {
+            Console.WriteLine(dane);
+        }
         static void Main(string[] args)
         {
             var kolejka = new KolejkaKolowa<double>();
@@ -12,7 +17,7 @@ namespace _3_KlasyIInterfejsyGeneryczne
 
             var elementyJakoInt = kolejka.ElementKonwertowany<double, int>();
 
-            kolejka.Drukuj();
+            kolejka.Drukuj(KonsolaWypisz);
             PrzetwarzanieDanych(kolejka);
         }
 
