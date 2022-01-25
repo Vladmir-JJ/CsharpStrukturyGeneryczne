@@ -6,11 +6,14 @@ namespace _3_KlasyIInterfejsyGeneryczne
     {
         static void Main(string[] args)
         {
-            var kolejka = new DuzaKolejka<double>(pojemnosc: 3);
+            var kolejka = new KolejkaKolowa<double>();
 
             WprowadzanieDanych(kolejka);
+            foreach (var item in kolejka)
+            {
+                Console.WriteLine(item);
+            }
             PrzetwarzanieDanych(kolejka);
-            //Console.ReadLine();
         }
 
         private static void PrzetwarzanieDanych(IKolejka<double> kolejka)
