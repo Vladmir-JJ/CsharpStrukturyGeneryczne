@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System;
 
 namespace _3_KlasyIInterfejsyGeneryczne
 {
@@ -15,7 +16,7 @@ namespace _3_KlasyIInterfejsyGeneryczne
                 yield return (Tout)wynik;
             }
         }
-        public static void Drukuj<T>(this IKolejka<T> kolejka, Drukarka<T> wydruk)
+        public static void Drukuj<T>(this IKolejka<T> kolejka, Action<T> wydruk)
         {
             foreach (var item in kolejka)
             {

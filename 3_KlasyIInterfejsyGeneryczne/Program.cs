@@ -4,20 +4,17 @@ using static _3_KlasyIInterfejsyGeneryczne.KolejkaExtention;
 namespace _3_KlasyIInterfejsyGeneryczne
 {
     class Program
-    {
-        static void KonsolaWypisz(double dane)
-        {
-            Console.WriteLine(dane);
-        }
+    {       
         static void Main(string[] args)
         {
+            Action<double> drukuj = x => Console.WriteLine(x);
+            drukuj(11.4);
+            Action<int, int, int> test = (a, b, c) => Console.WriteLine(a+b+c);
+            test(1, 3, 5);
+
             var kolejka = new KolejkaKolowa<double>();
-
             WprowadzanieDanych(kolejka);
-
-            var elementyJakoInt = kolejka.ElementKonwertowany<double, int>();
-
-            kolejka.Drukuj(KonsolaWypisz);
+            kolejka.Drukuj(d => Console.WriteLine(d));
             PrzetwarzanieDanych(kolejka);
         }
 
@@ -48,4 +45,5 @@ namespace _3_KlasyIInterfejsyGeneryczne
             }
         }
     }
+
 }
