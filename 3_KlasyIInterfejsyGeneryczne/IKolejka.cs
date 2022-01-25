@@ -8,6 +8,6 @@ namespace _3_KlasyIInterfejsyGeneryczne
         bool JestPusty { get; }
 
         T Czytaj();
-        void Zapisz(T wartosc);
+        void Zapisz(T wartosc);        
     }
 }

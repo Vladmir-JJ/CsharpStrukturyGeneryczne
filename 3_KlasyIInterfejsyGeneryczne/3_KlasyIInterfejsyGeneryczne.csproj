@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="DuzaKolejka.cs" />
     <Compile Include="IKolejka.cs" />
+    <Compile Include="KolejkaExtention.cs" />
     <Compile Include="KolekaKolowa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
