@@ -54,6 +54,7 @@
     <Compile Include="Kolejka_TEST.cs" />
     <Compile Include="Stos_TEST.cs" />
     <Compile Include="HashSet_TEST.cs" />
+    <Compile Include="LinkedList_TEST.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

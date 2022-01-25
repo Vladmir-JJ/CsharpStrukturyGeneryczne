@@ -9,7 +9,26 @@ namespace _2_KolekcjeGeneryczne
         {
             //Kolejka();
             //Stos();
-            HashSet();
+            //HashSet();
+            //LinkedList();
+
+            LinkedList<int> lista = new LinkedList<int>();
+            lista.AddFirst(5);
+            lista.AddFirst(6);
+            lista.AddFirst(7);
+
+            var element1 = lista.First;
+            var elementOstatni = lista.Last;
+            lista.AddAfter(element1, 10);
+            lista.AddBefore(element1, 20);
+
+            var node = lista.First;
+
+            while (node != null)
+            {
+                Console.WriteLine(node.Value);
+                node = node.Next;
+            }
 
             /*  var liczby = new List<int>(10);
               var pojemnosc = -1;
@@ -38,6 +57,21 @@ namespace _2_KolekcjeGeneryczne
             {
                 Console.WriteLine(listaPracownikow[i].Imie + " " + listaPracownikow[i].Nazwisko);
             } */
+        }
+
+        private static void LinkedList()
+        {
+            LinkedList<int> lista = new LinkedList<int>();
+            lista.AddFirst(5);
+            lista.AddFirst(6);
+            lista.AddFirst(7);
+            lista.AddLast(1);
+            lista.AddLast(2);
+
+            foreach (var item in lista)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         private static void HashSet()
