@@ -18,6 +18,29 @@ namespace _2_KolekcjeGeneryczne
             //SortedList();
             //SortedSet();
 
+            var pracownicy = new SortedDictionary<string, SortedSet<Pracownik>>();
+            pracownicy.Add("Sprzedaż", new SortedSet<Pracownik>(new PracownikComparer()));
+            pracownicy["Sprzedaż"].Add(new Pracownik { Imie = "Jan", Nazwisko = "Kowalski" });
+            pracownicy["Sprzedaż"].Add(new Pracownik { Imie = "Kazimierz", Nazwisko = "Beton" });
+            pracownicy["Sprzedaż"].Add(new Pracownik { Imie = "Urszula", Nazwisko = "Krzak" });
+            pracownicy["Sprzedaż"].Add(new Pracownik { Imie = "Leon", Nazwisko = "Krzak" });
+            pracownicy.Add("Księgowość", new SortedSet<Pracownik>(new PracownikComparer()));
+            pracownicy["Księgowość"].Add(new Pracownik { Imie = "Adam", Nazwisko = "Małysz" });
+            pracownicy["Księgowość"].Add(new Pracownik { Imie = "Monika", Nazwisko = "Wysocka" });
+            pracownicy["Księgowość"].Add(new Pracownik { Imie = "Agata", Nazwisko = "Beton" });
+            pracownicy["Księgowość"].Add(new Pracownik { Imie = "Barbara", Nazwisko = "Beton" });
+            pracownicy["Księgowość"].Add(new Pracownik { Imie = "Marta", Nazwisko = "Tutak" });
+            pracownicy["Księgowość"].Add(new Pracownik { Imie = "Renata", Nazwisko = "Popo" });
+            
+
+            foreach (var dzial in pracownicy)
+            {
+                Console.WriteLine(dzial.Key);
+                foreach (var pracownik in dzial.Value)
+                {
+                    Console.WriteLine("\t" + pracownik.Nazwisko);
+                }
+            }
             /*  var liczby = new List<int>(10);
               var pojemnosc = -1;
               while(true)
